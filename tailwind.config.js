@@ -7,5 +7,9 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  // corePlugins: {
+  //   // other core plugins
+  //   '@layer': ['utilities'],
+  // },
+  plugins: [require("tailwind-scrollbar")],
 }

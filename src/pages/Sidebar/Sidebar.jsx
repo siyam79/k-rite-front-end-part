@@ -8,6 +8,7 @@ import { SlSettings } from "react-icons/sl";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import { FaConnectdevelop , FaUserFriends , FaCode } from "react-icons/fa";
+import { Fa7  } from "react-icons/fa6";
 import { RiBuilding3Line } from "react-icons/ri";
 import { LuHelpingHand  } from "react-icons/lu";
 import { useMediaQuery } from "react-responsive";
@@ -75,7 +76,7 @@ const Sidebar = () => {
 
     const subMenusList = [
         {
-            name: "build",
+            name: "Products",
             icon: RiBuilding3Line,
             menus: ["Roadmap", "Feedback", "performance", "Team", "Analytics"],
         },
@@ -99,8 +100,7 @@ const Sidebar = () => {
                 initial={{ x: isTabletMid ? -250 : 0 }}
                 animate={open ? "open" : "closed"}
                 className=" bg-white text-gray shadow-xl z-[999] max-w-[16rem]  w-[16rem] 
-            overflow-hidden md:relative fixed
-         h-screen "
+            overflow-hidden md:relative fixed  min-h-screen"
             >
                 <div className="flex items-center gap-2.5 font-medium border-b py-3 border-slate-300  mx-2">
                     <img
@@ -123,7 +123,7 @@ const Sidebar = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/authentication"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
+                            <NavLink to={"/marketing_team"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
                                 <BsPerson size={23} className="min-w-max" />
                                 Marketing Team
                             </NavLink>
@@ -177,9 +177,15 @@ const Sidebar = () => {
                                                 Help Center 
                                             </NavLink>
                                         </li>
+                                        <li>
+                                            <NavLink to={"/settings"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
+                                                <Fa7    size={23} className="min-w-max" />
+                                               Days Left On trial
+                                            </NavLink>
+                                        </li>
                                     </ul>
                                 </div>
-                                <p className="text-teal-500 py-1.5 px-3 text-xs bg-teal-50 rounded-xl">
+                                <p className="text-teal-600 py-1.5 px-3 mr-6 text-xs bg-teal-50 rounded-xl">
                                     Upgrade
                                 </p>
                             </div>

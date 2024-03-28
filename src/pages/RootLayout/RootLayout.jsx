@@ -5,7 +5,7 @@ function RootLayout({ children }) {
   return (
     <div className="flex gap-5">
       <Sidebar />
-      <main className="max-w-7xl flex-1 mx-auto py-4 px-2">
+      <main className="max-w-7xl flex-1 mx-auto  lg:px-2">
         {/* {children} */}
 
         <Outlet></Outlet>

@@ -12,7 +12,7 @@ import { Fa7  } from "react-icons/fa6";
 import { RiBuilding3Line } from "react-icons/ri";
 import { LuHelpingHand  } from "react-icons/lu";
 import { useMediaQuery } from "react-responsive";
-import { MdMenu } from "react-icons/md";
+import { CiMenuKebab  } from "react-icons/ci";
 
 import { FaChartLine } from "react-icons/fa";
 
@@ -215,8 +215,8 @@ const Sidebar = () => {
                     <IoIosArrowBack size={25} />
                 </motion.div>
             </motion.div>
-            <div className="m-3 md:hidden  " onClick={() => setOpen(true)}>
-                <MdMenu size={25} />
+            <div className="m-2 py-3 md:hidde " onClick={() => setOpen(true)}>
+                <CiMenuKebab  size={20} />
             </div>
         </div>
     );

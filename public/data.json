@@ -1,0 +1,91 @@
+[
+    {
+        "id": 1,
+        "brand": "TechExplorers",
+        "icon": "https://i.ibb.co/VgVM4md/icon3.jpg",
+        "description": "TechExplorers is a community dedicated to exploring ",
+        "member_image": [
+            "https://i.ibb.co/XJ9qJtQ/avatar2.jpg",
+            " https://i.ibb.co/47jNCpY/avatar1.jpg",
+            "https://i.ibb.co/fdxJvQ3/avatar1.jpg"
+        ],
+        "categories": {
+            "authentication": "firebase",
+            "market_place": "Web Developer"
+        },
+        "tags": [
+            "Blockchain"
+        ],
+        "meeting_time": {
+            "to_day": " In 30 Minute "
+        }
+    },
+    {
+        "id": 2,
+        "brand": "CreativeMinds",
+        "icon": "https://i.ibb.co/LSYsCjL/icon4.jpg",
+        "description": "CreativeMinds is a platform for artists, ",
+        "member_image": [
+            "https://i.ibb.co/9HmwSVd/avatar4.jpg",
+            "https://i.ibb.co/bWTz0Qy/avatar3.jpg",
+            "https://i.ibb.co/XJ9qJtQ/avatar2.jpg",
+            " https://i.ibb.co/47jNCpY/avatar1.jpg",
+            "https://i.ibb.co/fdxJvQ3/avatar1.jpg"
+        ],
+        "categories": {
+            "web_service": "Web Service",
+            "brand": "B2B"
+        },
+        "tags": [
+            "Painting",
+            "Photography"
+        ],
+        "meeting_time": {
+            "yesterday": "7 Hours Ago"
+        }
+    },
+    {
+        "id": 3,
+        "brand": "GreenEarth Alliance",
+        "icon": "https://i.ibb.co/KszdkFM/icon2.jpg ",
+        "description": "GreenEarth Alliance is committed to environmental ",
+        "member_image": [
+            "https://i.ibb.co/9HmwSVd/avatar4.jpg",
+            "https://i.ibb.co/bWTz0Qy/avatar3.jpg",
+            "https://i.ibb.co/XJ9qJtQ/avatar2.jpg",
+            " https://i.ibb.co/47jNCpY/avatar1.jpg"
+        ],
+        "categories": {
+            "authentication": "firebase"
+        },
+        "tags": [
+            "Renewable Energy",
+            "Recycling"
+        ],
+        "meeting_time": {
+            "tomorrow": "Tommorow"
+        }
+    },
+    {
+        "id": 4,
+        "brand": "Tech Vector Art ",
+        "icon": " https://i.ibb.co/JqxQmd7/icon1.jpg",
+        "description": "GreenEarth Alliance is committed to environmental",
+        "member_image": [
+            "https://i.ibb.co/9HmwSVd/avatar4.jpg",
+            "https://i.ibb.co/bWTz0Qy/avatar3.jpg",
+            "https://i.ibb.co/XJ9qJtQ/avatar2.jpg"
+        ],
+        "categories": {
+            "market_place": "Web Developer"
+        },
+        "tags": [
+            "Renewable Energy",
+            "Climate Action",
+            "Ecological Restoration"
+        ],
+        "meeting_time": {
+            "reject": "No Connection"
+        }
+    }
+]

@@ -15,12 +15,9 @@ const Desk = () => {
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className=" flex items-center gap-1  "
-                        id="options-menu"
-
-                        aria-haspopup="true"
-                        aria-expanded="true"
+                        
                     >
-                        <span className='font-medium'> Desk </span> <IoIosArrowDown className={` ${isOpen && "rotate-180"} duration-200 `}></IoIosArrowDown>
+                        <span className='font-medium whitespace-pre text-sm md:text-md'> Desk </span> <IoIosArrowDown className={` ${isOpen && "rotate-180"} duration-200 `}></IoIosArrowDown>
                     </button>
 
                 </div>

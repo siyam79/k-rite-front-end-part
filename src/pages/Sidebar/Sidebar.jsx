@@ -7,17 +7,14 @@ import { IoIosArrowBack } from "react-icons/io";
 import { SlSettings } from "react-icons/sl";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
-import { FaConnectdevelop , FaUserFriends , FaCode } from "react-icons/fa";
-import { Fa7  } from "react-icons/fa6";
+import { FaConnectdevelop, FaUserFriends, FaCode } from "react-icons/fa";
+import { Fa7 } from "react-icons/fa6";
 import { RiBuilding3Line } from "react-icons/ri";
-import { LuHelpingHand  } from "react-icons/lu";
+import { LuHelpingHand } from "react-icons/lu";
 import { useMediaQuery } from "react-responsive";
-import { CiMenuKebab  } from "react-icons/ci";
+import { CiMenuKebab } from "react-icons/ci";
 
 import { FaChartLine } from "react-icons/fa";
-
-
-
 
 
 import { NavLink, useLocation, useRoutes } from "react-router-dom";
@@ -88,7 +85,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div>
+        <div className="">
             <div
                 onClick={() => setOpen(false)}
                 className={`md:hidden fixed inset-0 max-h-screen z-[998] bg-black/50 ${open ? "block" : "hidden"
@@ -99,13 +96,13 @@ const Sidebar = () => {
                 variants={Nav_animation}
                 initial={{ x: isTabletMid ? -250 : 0 }}
                 animate={open ? "open" : "closed"}
-                className=" bg-white text-gray shadow-xl z-[999] max-w-[16rem]  w-[16rem] 
-            overflow-hidden md:relative fixed  min-h-screen"
+                className=" bg-white text-gray shadow-xl z-[999]  max-w-[16rem]  w-[16rem] 
+            overflow-hidden md:relative fixed  h-full min-h-screen "
             >
                 <div className="flex items-center gap-2.5 font-medium border-b py-3 border-slate-300  mx-2">
                     <img
                         src="https://i.ibb.co/1MMyL36/technology-removebg-preview.png"
-                        width={35}
+                        width={30}
                         alt=""
                     />
                     <div>
@@ -114,37 +111,67 @@ const Sidebar = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col  h-full">
+                <div className="flex flex-col h-full  min-h-screen ">
                     <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1  font-medium overflow-x-hidden scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-100   md:h-[68%] h-[70%]">
                         <li>
-                            <NavLink to={"/"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
+                            <NavLink to={"/"} className={({ isActive, isPending }) =>
+                                    isPending
+                                        ? "pending"
+                                        : isActive
+                                            ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                            : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                }>
                                 <AiOutlineAppstore size={23} className="min-w-max" />
                                 Design Team
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/marketing_team"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
+                            <NavLink to={"/marketing_team"}
+
+                                className={({ isActive, isPending }) =>
+                                    isPending
+                                        ? "pending"
+                                        : isActive
+                                            ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                            : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                }
+
+
+
+                            >
                                 <BsPerson size={23} className="min-w-max" />
                                 Marketing Team
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/stroage"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
+                            <NavLink to={"/stroage"} className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                            }>
                                 <FaChartLine size={23} className="min-w-max" />
                                 Development Team
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/stroage"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
+                            <NavLink to={"/stroage"} className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                            }>
                                 <FaCode size={23} className="min-w-max" />
-                                Development Team
+                                Problem Solve Team
                             </NavLink>
                         </li>
 
                         {(open || isTabletMid) && (
-                            <div className="border-y py-5 border-slate-300 ">
-                                <p className="pl-3 text-slate-500 inline-block mb-2 text-xl font-medium border-2 border-gray-200 w-full ">
-                                    Folders
+                            <div className=" py-5  ">
+                                <p className="pl-3 text-slate-400  mb-2 text-xl font-medium  w-full flex items-center px-1 justify-between">
+                                    Folders <span className="text-2xl "> + </span>
                                 </p>
                                 {subMenusList?.map((menu) => (
                                     <div key={menu.name} className="flex flex-col gap-1">
@@ -154,7 +181,37 @@ const Sidebar = () => {
                             </div>
                         )}
                         <li>
-                            <NavLink to={"/settings"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
+                            <NavLink to={"/settings"} className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                            }>
+                                <SlSettings size={23} className="min-w-max" />
+                                Office
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={"/settings"} className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                            }>
+                                <SlSettings size={23} className="min-w-max" />
+                                Design
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={"/settings"} className={({ isActive, isPending }) =>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                            }>
                                 <SlSettings size={23} className="min-w-max" />
                                 Settings
                             </NavLink>
@@ -166,21 +223,39 @@ const Sidebar = () => {
                                 <div>
                                     <ul>
                                         <li>
-                                            <NavLink to={"/settings"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
-                                                <FaUserFriends  size={23} className="min-w-max" />
+                                            <NavLink to={"/settings"} className={({ isActive, isPending }) =>
+                                                isPending
+                                                    ? "pending"
+                                                    : isActive
+                                                        ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                            }>
+                                                <FaUserFriends size={23} className="min-w-max" />
                                                 Invite Teammates
                                             </NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to={"/settings"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
-                                                <LuHelpingHand   size={23} className="min-w-max" />
-                                                Help Center 
+                                            <NavLink to={"/settings"} className={({ isActive, isPending }) =>
+                                                isPending
+                                                    ? "pending"
+                                                    : isActive
+                                                        ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                            }>
+                                                <LuHelpingHand size={23} className="min-w-max" />
+                                                Help Center
                                             </NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to={"/settings"} className="p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium">
-                                                <Fa7    size={23} className="min-w-max" />
-                                               Days Left On trial
+                                            <NavLink to={"/settings"} className={({ isActive, isPending }) =>
+                                                isPending
+                                                    ? "pending"
+                                                    : isActive
+                                                        ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                            }>
+                                                <Fa7 size={23} className="min-w-max" />
+                                                Days Left On trial
                                             </NavLink>
                                         </li>
                                     </ul>
@@ -192,31 +267,10 @@ const Sidebar = () => {
                         </div>
                     )}
                 </div>
-                <motion.div
-                    onClick={() => {
-                        setOpen(!open);
-                    }}
-                    animate={
-                        open
-                            ? {
-                                x: 0,
-                                y: 0,
-                                rotate: 0,
-                            }
-                            : {
-                                x: -10,
-                                y: -200,
-                                rotate: 180,
-                            }
-                    }
-                    transition={{ duration: 0 }}
-                    className="absolute w-fit h-fit md:block z-50 hidden right-2 bottom-3 cursor-pointer"
-                >
-                    <IoIosArrowBack size={25} />
-                </motion.div>
+
             </motion.div>
-            <div className="m-2 py-3 md:hidde " onClick={() => setOpen(true)}>
-                <CiMenuKebab  size={20} />
+            <div className="m-2 py-3 md:hidden " onClick={() => setOpen(true)}>
+                <CiMenuKebab size={20} />
             </div>
         </div>
     );

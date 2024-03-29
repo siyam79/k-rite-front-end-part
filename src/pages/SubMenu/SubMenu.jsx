@@ -6,7 +6,7 @@ import { NavLink, useLocation } from "react-router-dom";
 const SubMenu = ({ data }) => {
   const { pathname } = useLocation();
   const [subMenuOpen, setSubMenuOpen] = useState(false);
-  
+
   return (
     <>
       <li
@@ -23,11 +23,11 @@ const SubMenu = ({ data }) => {
         animate={
           subMenuOpen
             ? {
-                height: "fit-content",
-              }
+              height: "fit-content",
+            }
             : {
-                height: 0,
-              }
+              height: 0,
+            }
         }
         className="flex h-0 flex-col pl-14 text-[0.8rem] font-normal overflow-hidden"
       >
@@ -36,7 +36,13 @@ const SubMenu = ({ data }) => {
             {/* className="hover:text-blue-600 hover:font-medium" */}
             <NavLink
               to={`/${data.name}/${menu}`}
-              className="link !bg-transparent capitalize p-2 text-[15px] flex rounded-md gap-4 items-center md:cursor-pointer duration-300 font-medium"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                    ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                    : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+              }
             >
               {menu}
             </NavLink>

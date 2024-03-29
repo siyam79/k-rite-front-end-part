@@ -16,12 +16,9 @@ const Tags = () => {
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className=" flex items-center gap-1  "
-                    id="options-menu"
-
-                    aria-haspopup="true"
-                    aria-expanded="true"
+                  
                 >
-                    <span className='font-medium'> Tags </span> <IoIosArrowDown className={` ${isOpen && "rotate-180"} duration-200 `}></IoIosArrowDown>
+                    <span className='font-medium whitespace-pre text-sm md:text-md'> Tags </span> <IoIosArrowDown className={` ${isOpen && "rotate-180"} duration-200 `}></IoIosArrowDown>
                 </button>
 
             </div>

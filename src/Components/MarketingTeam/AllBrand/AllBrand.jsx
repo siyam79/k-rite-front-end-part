@@ -11,18 +11,15 @@ const AllBrand = () => {
 
     return (
         <div>
-            <div className="relative md:py-2 lg:py-3 py-1">
-                <div className='flex items-center bg-white gap-2 rounded-md shadow-md py-1 px-2 w-[140px]  '>
-                    <RiListSettingsFill size={20} className="min-w-max" />
+            <div className=" md:py-2 lg:py-3 py-1 w-[140px]">
+                <div className='flex items-center bg-white lg:gap-2 rounded-md shadow-md py-1 px-2 lg:w-[140px]  '>
+                    <RiListSettingsFill size={15} className="min-w-max" />
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="flex items-center gap-1  "
-                        id="options-menu"
-
-                        aria-haspopup="true"
-                        aria-expanded="true"
+                       
                     >
-                        <span className='font-medium'>  All Brands</span> <IoIosArrowDown className={` ${isOpen && "rotate-180"} duration-200 `}></IoIosArrowDown>
+                        <span className='font-medium whitespace-pre text-sm md:text-md'>  All Brands</span> <IoIosArrowDown className={` ${isOpen && "rotate-180"} duration-200 `}></IoIosArrowDown>
                     </button>
 
                 </div>

@@ -202,32 +202,30 @@ const MarketingTeam = () => {
                                             <td className="py-2  border-2 px-2 ">
 
                                                 {product?.categories?.market_place && (
-                                                    <p className="py-0.5 px-2 text-sky-600 uppercase border text-center rounded-full text-[12px]  ">
+                                                    <p className="py-0.5 px-2 bg-sky-200 text-sky-700 uppercase border text-center rounded-full text-[12px] ">
                                                         {product?.categories?.market_place}
                                                     </p>
                                                 )}
 
                                                 {product?.categories?.authentication && (
-                                                    <p className="py-0.5 px-2 text-green-600 uppercase border text-center rounded-full text-[12px] ">
+                                                    <p className="py-0.5 px-2 bg-green-300 text-green-600 uppercase border text-center rounded-full text-[12px] mt-1">
                                                         {product?.categories?.authentication}
                                                     </p>
                                                 )}
                                                 {product?.categories?.web_service && (
-                                                    <p className="py-0.5 px-2 text-purple-600 uppercase border text-center rounded-full text-[12px] ">
+                                                    <p className="py-0.5 px-2 bg-purple-200 text-purple-600 uppercase border text-center rounded-full text-[12px] ">
                                                         {product?.categories?.web_service}
                                                     </p>
                                                 )}
                                                 {product?.categories?.brand && (
-                                                    <p className="py-0.5 px-2 text-yellow-600 uppercase border text-center rounded-full text-[12px] ">
+                                                    <p className="py-0.5 px-2 bg-yellow-200 mt-1  text-yellow-600 uppercase border text-center rounded-full text-[12px] ">
                                                         {product?.categories?.brand}
                                                     </p>
                                                 )}
 
-                                                
-
-
-
                                             </td>
+
+                                            {/* tages manage CODE  */}
                                             <td className="py-2  border-2 px-2 ">
                                                 {product?.tags.length > 0 ? (
                                                     <p className='text-[10px]  font-medium border text-left px-2 py-0.5 ' > #{product?.tags[0]} </p>
@@ -244,27 +242,37 @@ const MarketingTeam = () => {
                                                 )}
 
                                             </td>
+
+                                            {/* time manage code  */}
                                             <td className="py-2  border-2 px-2 ">
-                                                
-                                                
-                                            {product?.meeting_time?.yesterday && (
-                                                    <p className="py-0.5 px-2 bg-yellow-200  text-yellow-700 uppercase border  text-center rounded-full text-[12px] ">
+
+
+                                                {product?.meeting_time?.yesterday && (
+                                                    <p className="py-0.5 px-2 bg-yellow-200  text-yellow-700 uppercase border  text-center rounded-full text-[12px]">
                                                         {product?.meeting_time?.yesterday}
                                                     </p>
                                                 )}
-                                            {product?.meeting_time?.to_day && (
-                                                    <p className="py-0.5 px-2 bg-yellow-200  text-yellow-700 uppercase border  text-center rounded-full text-[12px] ">
-                                                        {product?.meeting_time?.To_day}
+                                                {product?.meeting_time?.to_day && (
+                                                    <p className="py-0.5 px-2 bg-blue-300  text-blue-700 uppercase border  text-center rounded-full text-[12px] ">
+                                                        {product?.meeting_time?.to_day}
                                                     </p>
                                                 )}
-                                            {product?.meeting_time?.yesterday && (
-                                                    <p className="py-0.5 px-2 bg-yellow-200  text-yellow-700 uppercase border  text-center rounded-full text-[12px] ">
-                                                        {product?.meeting_time?.yesterday}
+                                                {product?.meeting_time?.tomorrow && (
+                                                    <p className="py-0.5 px-2 bg-green-300  text-green-700 uppercase border  text-center rounded-full text-[12px] ">
+                                                        {product?.meeting_time?.tomorrow}
+                                                    </p>
+                                                )}
+                                    
+                                                {product?.meeting_time?.reject && (
+                                                    <p className="py-0.5 px-2 bg-red-300  text-red-700 uppercase border  text-center rounded-full text-[12px] ">
+                                                        {product?.meeting_time?.reject}
                                                     </p>
                                                 )}
 
-                                                
-                                                </td>
+
+                                            </td>
+
+
                                             <td className="py-2  border-2 px-2 ">  </td>
                                         </tr>
                                     ))}

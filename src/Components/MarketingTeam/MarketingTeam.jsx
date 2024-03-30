@@ -55,7 +55,7 @@ const MarketingTeam = () => {
     };
 
 
-//  profession data filtering
+    //  profession data filtering
 
     const filteredDataByProfession =
         selectedProfession !== 'All'
@@ -66,7 +66,7 @@ const MarketingTeam = () => {
         <>
             <div className='bg-white min-h-screen rounded-md px-2 md:px-3 lg:px-4 shadow-sm'>
                 {/* Header section */}
-                <div className='flex items-center justify-between py-4 shadow-sm'>
+                <div className='flex items-center lg:justify-between py-4 shadow-sm'>
                     <h1 className='md:font-medium lg:text-xl text-sm mr-2 text-gray-500'> Products </h1>
                     <div className='flex items-center gap-4'>
                         <div className='relative w-full'>
@@ -146,7 +146,7 @@ const MarketingTeam = () => {
 
                 {/* Data table */}
                 <div>
-                    <div className='overflow-x-auto py-10'>
+                    <div className='overflow-x-auto py-4'>
                         {filteredDataByProfession?.length > 0 ? (
                             <table className='w-full divide-y'>
                                 <thead className='bg-white'>

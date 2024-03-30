@@ -22,6 +22,15 @@
     
 }
 
+
+
+.single-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+
 /* .link {
     @apply p-2.5 flex rounded-md gap-6 items-center md: cursor-pointer  duration-300 font-medium;
 }

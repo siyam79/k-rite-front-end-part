@@ -1,7 +1,8 @@
 [
     {
         "id": 1,
-        "brand": "TechExplorers",
+        "brand": "Apple",
+        "profession": "Data_Science",
         "icon": "https://i.ibb.co/VgVM4md/icon3.jpg",
         "description": "TechExplorers is a community dedicated to exploring ",
         "member_image": [
@@ -22,7 +23,8 @@
     },
     {
         "id": 2,
-        "brand": "CreativeMinds",
+        "brand": "Google",
+        "profession": "Web_Developer",
         "icon": "https://i.ibb.co/LSYsCjL/icon4.jpg",
         "description": "CreativeMinds is a platform for artists, ",
         "member_image": [
@@ -46,7 +48,8 @@
     },
     {
         "id": 3,
-        "brand": "GreenEarth Alliance",
+        "brand": "One Plus",
+        "profession": "App_Developer",
         "icon": "https://i.ibb.co/KszdkFM/icon2.jpg ",
         "description": "GreenEarth Alliance is committed to environmental ",
         "member_image": [
@@ -68,24 +71,47 @@
     },
     {
         "id": 4,
-        "brand": "Tech Vector Art ",
+        "brand": "Nasa",
+        "profession":"Programmer",
+        "icon": " https://i.ibb.co/JqxQmd7/icon1.jpg",
+        "description": "GreenEarth Alliance is committed to environmental",
+        "member_image": [
+            "https://i.ibb.co/9HmwSVd/avatar4.jpg",
+            "https://i.ibb.co/XJ9qJtQ/avatar2.jpg"
+        ],
+        "categories": {
+            "market_place": "Python Developer"
+        },
+        "tags": [
+            "Renewable Energy"
+           
+        ],
+        "meeting_time": {
+            "reject": "No Connection"
+        }
+    },
+    {
+        "id": 5,
+        "brand": "Nasa",
+        "profession": "App_Developer",
         "icon": " https://i.ibb.co/JqxQmd7/icon1.jpg",
         "description": "GreenEarth Alliance is committed to environmental",
         "member_image": [
             "https://i.ibb.co/9HmwSVd/avatar4.jpg",
             "https://i.ibb.co/bWTz0Qy/avatar3.jpg",
-            "https://i.ibb.co/XJ9qJtQ/avatar2.jpg"
+            "https://i.ibb.co/XJ9qJtQ/avatar2.jpg",
+            " https://i.ibb.co/47jNCpY/avatar1.jpg",
+            " https://i.ibb.co/47jNCpY/avatar1.jpg"
         ],
         "categories": {
-            "market_place": "Web Developer"
+            "web_service": "Programmer"
         },
         "tags": [
-            "Renewable Energy",
-            "Climate Action",
-            "Ecological Restoration"
+            "Renewable Energy"
+           
         ],
         "meeting_time": {
-            "reject": "No Connection"
+            "tomorrow": "in Comeing"
         }
     }
 ]

@@ -30,8 +30,9 @@ const SubMenu = ({ data }) => {
             }
         }
         className="flex h-0 flex-col pl-14 text-[0.8rem] font-normal overflow-hidden"
+
       >
-        {data.menus?.map((menu) => (
+        {data?.menus?.map((menu) => (
           <li key={menu}>
             {/* className="hover:text-blue-600 hover:font-medium" */}
             <NavLink
@@ -41,7 +42,7 @@ const SubMenu = ({ data }) => {
                   ? "pending"
                   : isActive
                     ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                    : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                    : "p-2.5 flex rounded-md gap-6 text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
               }
             >
               {menu}

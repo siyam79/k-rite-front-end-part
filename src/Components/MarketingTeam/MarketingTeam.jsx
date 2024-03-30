@@ -54,9 +54,9 @@ const MarketingTeam = () => {
         setSelectedProfession(e.target.value);
     };
 
- 
 
-    
+
+
     const filteredDataByProfession =
         selectedProfession !== 'All'
             ? filteredData.filter((product) => product?.profession === selectedProfession)
@@ -67,7 +67,7 @@ const MarketingTeam = () => {
             <div className='bg-white min-h-screen rounded-md px-2 md:px-3 lg:px-4 shadow-sm'>
                 {/* Header section */}
                 <div className='flex items-center justify-between py-4 shadow-sm'>
-                    <h1 className='md:font-medium lg:text-xl text-sm mr-2'> Products </h1>
+                    <h1 className='md:font-medium lg:text-xl text-sm mr-2 text-gray-500'> Products </h1>
                     <div className='flex items-center gap-4'>
                         <div className='relative w-full'>
                             <input
@@ -106,7 +106,7 @@ const MarketingTeam = () => {
                         <Tags />
                         {/* Sort Components */}
                         <Sort />
-                       
+
                         {/* profession Filter */}
                         <div className='py-2 px-2'>
                             <select
@@ -122,11 +122,13 @@ const MarketingTeam = () => {
                         </div>
 
                     </div>
+
+                    {/* meeting section */}
                     <div className='flex items-center gap-1 md:gap-2 lg:gap-4 px-2'>
                         <div className='relative md:py-2 lg:py-3 py-1'>
                             <div className='flex items-center bg-white gap-2 rounded-md shadow-md py-1 px-3'>
                                 <SiGooglemeet size={13} className='min-w-max' />
-                                <button className='flex items-center gap-1 font-medium whitespace-pre text-sm md:text-md'>
+                                <button className='flex items-center gap-1 font-medium whitespace-pre text-sm md:text-md text-gray-500'>
                                     Meeting
                                 </button>
                             </div>
@@ -134,7 +136,7 @@ const MarketingTeam = () => {
                         <div className='relative md:py-2 lg:py-3 py-1'>
                             <div className='flex items-center bg-white gap-2 rounded-md shadow-md py-1 px-3'>
                                 <MdLabelImportantOutline size={18} className='min-w-max' />
-                                <button className='flex items-center gap-1 font-medium whitespace-pre text-sm md:text-md'>
+                                <button className='flex items-center gap-1 font-medium whitespace-pre text-sm md:text-md text-gray-500'>
                                     Import/Export
                                 </button>
                             </div>
@@ -148,7 +150,9 @@ const MarketingTeam = () => {
                         {filteredDataByProfession?.length > 0 ? (
                             <table className='w-full divide-y'>
                                 <thead className='bg-white'>
-                                    <tr className='text-slate-500 font-medium border-2'>
+
+                                    {/* table  */}
+                                    <tr className='text-gray-500 font-medium border-2'>
                                         <th className='py-2 px-2 border-2 flex items-center gap-2'>
                                             <input
                                                 type='checkbox'
@@ -192,15 +196,15 @@ const MarketingTeam = () => {
 
                                             {/* description */}
                                             <td className='py-2 border-2 px-1'>
-                                                <div className='truncate text-[10px]'>
-                                                    {product?.description.split(' ').slice(0, 4).join(' ')}.....
+                                                <div className='truncate text-[12px]'>
+                                                    {product?.description?.split(' ').slice(0, 4).join(' ')}.....
                                                 </div>
                                             </td>
 
 
                                             {/* image section */}
                                             <td className='py-2 border-2 px-2 flex l'>
-                                                <div className='flex -space-x-4 rtl:space-x-reverse'>
+                                                <div className='flex -space-x-4 rtl:space-x-reverse relative group'>
                                                     {product?.member_image.length > 0 ? (
                                                         <img
                                                             className='w-10 h-10 border-2 border-white rounded-full dark:border-gray-800'
@@ -235,6 +239,11 @@ const MarketingTeam = () => {
                                                     ) : (
                                                         <div className='hidden'></div>
                                                     )}
+
+                                                    <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 text-white text-center opacity-0 group-hover:opacity-100 p-1 rounded-md">
+                                                        {product.user_name}
+                                                    </div>
+
                                                 </div>
                                             </td>
 
@@ -263,7 +272,7 @@ const MarketingTeam = () => {
                                                 )}
                                             </td>
 
-
+                                            {/* tags */}
                                             <td className='py-2 border-2 px-2'>
                                                 {product?.tags.map((tag, index) => (
                                                     <p key={index} className='text-[10px] font-medium border text-left px-2 py-0.5'>
@@ -272,6 +281,7 @@ const MarketingTeam = () => {
                                                 ))}
                                             </td>
 
+                                            {/*  meet ing time  */}
 
                                             <td className='py-2 border-2 px-2'>
                                                 {product?.meeting_time?.yesterday && (
@@ -295,6 +305,7 @@ const MarketingTeam = () => {
                                                     </p>
                                                 )}
                                             </td>
+
                                             <td className='py-2 border-2 px-2'> </td>
                                         </tr>
                                     ))}

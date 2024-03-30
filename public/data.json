@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "user_name": "Ms. karina",
         "brand": "Apple",
         "profession": "Data_Science",
         "icon": "https://i.ibb.co/VgVM4md/icon3.jpg",
@@ -23,6 +24,7 @@
     },
     {
         "id": 2,
+        "user_name": "Mr. Best",
         "brand": "Google",
         "profession": "Web_Developer",
         "icon": "https://i.ibb.co/LSYsCjL/icon4.jpg",
@@ -48,6 +50,7 @@
     },
     {
         "id": 3,
+        "user_name": "Ms. Puja",
         "brand": "One Plus",
         "profession": "App_Developer",
         "icon": "https://i.ibb.co/KszdkFM/icon2.jpg ",
@@ -71,8 +74,9 @@
     },
     {
         "id": 4,
+        "user_name": "Jhon",
         "brand": "Nasa",
-        "profession":"Programmer",
+        "profession": "Programmer",
         "icon": " https://i.ibb.co/JqxQmd7/icon1.jpg",
         "description": "GreenEarth Alliance is committed to environmental",
         "member_image": [
@@ -84,7 +88,6 @@
         },
         "tags": [
             "Renewable Energy"
-           
         ],
         "meeting_time": {
             "reject": "No Connection"
@@ -92,7 +95,8 @@
     },
     {
         "id": 5,
-        "brand": "Nasa",
+        "user_name": "Rayhan Dahal",
+        "brand": "Amazon",
         "profession": "App_Developer",
         "icon": " https://i.ibb.co/JqxQmd7/icon1.jpg",
         "description": "GreenEarth Alliance is committed to environmental",
@@ -108,7 +112,6 @@
         },
         "tags": [
             "Renewable Energy"
-           
         ],
         "meeting_time": {
             "tomorrow": "in Comeing"

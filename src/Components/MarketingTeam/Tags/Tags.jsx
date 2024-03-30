@@ -18,7 +18,7 @@ const Tags = () => {
                     className=" flex items-center gap-1  "
                   
                 >
-                    <span className='font-medium whitespace-pre text-sm md:text-md'> Tags </span> <IoIosArrowDown className={` ${isOpen && "rotate-180"} duration-200 `}></IoIosArrowDown>
+                    <span className='font-medium whitespace-pre text-sm md:text-md text-gray-500'> Tags </span> <IoIosArrowDown className={` ${isOpen && "rotate-180"} duration-200 `}></IoIosArrowDown>
                 </button>
 
             </div>
@@ -26,7 +26,7 @@ const Tags = () => {
 
             {isOpen && (
                 <div
-                    className=" absolute  w-40 my-1 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    className=" absolute  w-24 my-1 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="options-menu"

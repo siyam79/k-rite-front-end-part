@@ -7,7 +7,7 @@ const Sort = () => {
             <div className='flex items-center bg-white justify-center gap-2 rounded-md shadow-md py-1 px-1   '>
                <FaSortAlphaDown size={13} className="min-w-max"></FaSortAlphaDown>
                 <button
-                    className=" flex items-center gap-1 font-medium whitespace-pre text-sm md:text-md"
+                    className=" flex items-center gap-1 font-medium whitespace-pre text-sm md:text-md text-gray-500"
 
                 >
                     Sort

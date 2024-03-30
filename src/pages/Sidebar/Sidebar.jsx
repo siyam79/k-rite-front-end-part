@@ -17,7 +17,7 @@ import { CiMenuKebab } from "react-icons/ci";
 import { FaChartLine } from "react-icons/fa";
 
 
-import { NavLink, useLocation, useRoutes } from "react-router-dom";
+import { Link, NavLink, useLocation, useRoutes } from "react-router-dom";
 import SubMenu from "../SubMenu/SubMenu";
 
 const Sidebar = () => {
@@ -71,16 +71,17 @@ const Sidebar = () => {
             },
         };
 
+
     const subMenusList = [
         {
             name: "Products",
             icon: RiBuilding3Line,
-            menus: ["Roadmap", "Feedback", "performance", "Team", "Analytics"],
+            menus: ["Roadmap", "Feedback", "Performance", "Team", "Analytics"],
         },
         {
             name: "Team",
             icon: FaConnectdevelop,
-            menus: ["dashboard", "realtime", "events"],
+            menus: ["Dashboard", "Realtime", "Events"],
         },
     ];
 
@@ -99,28 +100,33 @@ const Sidebar = () => {
                 className=" bg-white text-gray shadow-xl z-[999]  max-w-[16rem]  w-[16rem] 
             overflow-hidden md:relative fixed  h-full min-h-screen "
             >
-                <div className="flex items-center gap-2.5 font-medium border-b py-3 border-slate-300  mx-2">
-                    <img
-                        src="https://i.ibb.co/1MMyL36/technology-removebg-preview.png"
-                        width={30}
-                        alt=""
-                    />
-                    <div>
-                        <p> INC </p>
-                        <span className="text-xl whitespace-pre  font-semibold ">InnobadedHub</span>
+                <Link to="/">
+                    <div className="flex items-center gap-2.5 font-medium border-b py-3 border-slate-300  mx-2 px-2">
+                        <img
+                            src="https://i.ibb.co/551zq9R/9c6d3aca1189e2b105becf664a0dbb09.jpg"
+                            width={30}
+                            alt=""
+                        className="rounded-full "
+                        />
+                        <div className="flex items-center justify-between px-1 gap-6 ">
+                            
+                            <span className="text-md whitespace-pre  font-semibold text-gray-500">InnobadedHub</span>
+                            <img src="https://i.ibb.co/9HmwSVd/avatar4.jpg" alt="" className="className='w-10 h-10 border-2 border-white rounded-full dark:border-gray-800'"/>
+                            
+                        </div>
                     </div>
-                </div>
+                </Link>
 
                 <div className="flex flex-col h-full  min-h-screen ">
                     <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1  font-medium overflow-x-hidden scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-100   md:h-[68%] h-[70%]">
                         <li>
                             <NavLink to={"/"} className={({ isActive, isPending }) =>
-                                    isPending
-                                        ? "pending"
-                                        : isActive
-                                            ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                                            : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
-                                }>
+                                isPending
+                                    ? "pending"
+                                    : isActive
+                                        ? "p-2.5 flex  rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
+                                        : "p-2.5 flex rounded-md gap-6 text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
+                            }>
                                 <AiOutlineAppstore size={23} className="min-w-max" />
                                 Design Team
                             </NavLink>
@@ -133,7 +139,7 @@ const Sidebar = () => {
                                         ? "pending"
                                         : isActive
                                             ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                                            : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                            : "p-2.5 flex rounded-md gap-6 text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
                                 }
 
 
@@ -144,24 +150,24 @@ const Sidebar = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/stroage"} className={({ isActive, isPending }) =>
+                            <NavLink to={"/development_team"} className={({ isActive, isPending }) =>
                                 isPending
                                     ? "pending"
                                     : isActive
                                         ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                        : "p-2.5 flex rounded-md gap-6 text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
                             }>
                                 <FaChartLine size={23} className="min-w-max" />
                                 Development Team
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/stroage"} className={({ isActive, isPending }) =>
+                            <NavLink to={"/problem_solve_team"} className={({ isActive, isPending }) =>
                                 isPending
                                     ? "pending"
                                     : isActive
                                         ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                        : "p-2.5 flex rounded-md gap-6 text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
                             }>
                                 <FaCode size={23} className="min-w-max" />
                                 Problem Solve Team
@@ -170,47 +176,47 @@ const Sidebar = () => {
 
                         {(open || isTabletMid) && (
                             <div className=" py-5  ">
-                                <p className="pl-3 text-slate-400  mb-2 text-xl font-medium  w-full flex items-center px-1 justify-between">
+                                <p className="pl-3 text-gray-500  mb-2 text-xl font-medium  w-full flex items-center px-1 justify-between">
                                     Folders <span className="text-2xl "> + </span>
                                 </p>
                                 {subMenusList?.map((menu) => (
-                                    <div key={menu.name} className="flex flex-col gap-1">
+                                    <div key={menu.name} className="flex flex-col gap-1 text-gray-500">
                                         <SubMenu data={menu} />
                                     </div>
                                 ))}
                             </div>
                         )}
                         <li>
-                            <NavLink to={"/settings"} className={({ isActive, isPending }) =>
+                            <NavLink to={"/office"} className={({ isActive, isPending }) =>
                                 isPending
                                     ? "pending"
                                     : isActive
                                         ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                        : "p-2.5 flex rounded-md gap-6 text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
                             }>
                                 <SlSettings size={23} className="min-w-max" />
                                 Office
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/settings"} className={({ isActive, isPending }) =>
+                            <NavLink to={"/design"} className={({ isActive, isPending }) =>
                                 isPending
                                     ? "pending"
                                     : isActive
                                         ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                        : "p-2.5 flex rounded-md gap-6 text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
                             }>
                                 <SlSettings size={23} className="min-w-max" />
                                 Design
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/settings"} className={({ isActive, isPending }) =>
+                            <NavLink to={"/setting"} className={({ isActive, isPending }) =>
                                 isPending
                                     ? "pending"
                                     : isActive
                                         ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                        : "p-2.5 flex rounded-md gap-6 text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
                             }>
                                 <SlSettings size={23} className="min-w-max" />
                                 Settings
@@ -228,7 +234,7 @@ const Sidebar = () => {
                                                     ? "pending"
                                                     : isActive
                                                         ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                                        : "p-2.5 flex rounded-md gap-6 text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
                                             }>
                                                 <FaUserFriends size={23} className="min-w-max" />
                                                 Invite Teammates
@@ -240,7 +246,7 @@ const Sidebar = () => {
                                                     ? "pending"
                                                     : isActive
                                                         ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                                        : "p-2.5 flex rounded-md gap-6  text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
                                             }>
                                                 <LuHelpingHand size={23} className="min-w-max" />
                                                 Help Center
@@ -252,7 +258,7 @@ const Sidebar = () => {
                                                     ? "pending"
                                                     : isActive
                                                         ? "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium  bg-blue-100 text-blue-600"
-                                                        : "p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer duration-300 font-medium"
+                                                        : "p-2.5 flex rounded-md gap-6 text-gray-500 items-center md:cursor-pointer duration-300 font-medium"
                                             }>
                                                 <Fa7 size={23} className="min-w-max" />
                                                 Days Left On trial

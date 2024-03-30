@@ -55,11 +55,11 @@ const MarketingTeam = () => {
     };
 
 
-
+//  profession data filtering
 
     const filteredDataByProfession =
         selectedProfession !== 'All'
-            ? filteredData.filter((product) => product?.profession === selectedProfession)
+            ? filteredData?.filter((product) => product?.profession === selectedProfession)
             : filteredData;
 
     return (
@@ -251,7 +251,7 @@ const MarketingTeam = () => {
                                             {/* caterories */}
                                             <td className='py-2 border-2 px-2'>
                                                 {product?.categories?.market_place && (
-                                                    <p className='px-2 bg-sky-200 text-sky-700 uppercase border text-center rounded-full text-[10px]'>
+                                                    <p className=' py-0.5 px-2 bg-sky-200 text-sky-700 uppercase border text-center rounded-full text-[10px]'>
                                                         {product?.categories?.market_place}
                                                     </p>
                                                 )}
